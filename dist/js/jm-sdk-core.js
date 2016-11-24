@@ -8,7 +8,8 @@ if (typeof module !== 'undefined' && module.exports) {
  * @class  sdk
  */
 (function(){
-    jm.sdk = jm.sdk || {};
+    if(jm.sdk) return;
+    jm.sdk = {};
     var sdk = jm.sdk;
     jm.enableEvent(sdk);
     sdk.getLogger = jm.getLogger;
@@ -25,14 +26,14 @@ if (typeof module !== 'undefined' && module.exports) {
     };
 })();
 
-
 var jm = jm || {};
 if (typeof module !== 'undefined' && module.exports) {
     jm = require('jm-core');
 }
 
 (function(){
-    var sdk = jm.sdk || {};
+    if(jm.sdk.consts) return;
+    var sdk = jm.sdk;
 
     sdk.consts = {
         ERR: jm.ERR
@@ -46,7 +47,8 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 (function(){
-    var sdk = jm.sdk || {};
+    if(jm.sdk.utils) return;
+    var sdk = jm.sdk;
 
     /**
      * utils对象
@@ -67,7 +69,8 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 (function(){
-    var sdk = jm.sdk || {};
+    if(jm.sdk.$) return;
+    var sdk = jm.sdk;
     sdk.$ = {};
     var $ = sdk.$;
     var ERR = sdk.consts.ERR;
@@ -103,7 +106,8 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 (function(){
-    var sdk = jm.sdk || {};
+    if(jm.sdk.storage) return;
+    var sdk = jm.sdk;
     var isNode = false;
     var stores = {};
     if (typeof module !== 'undefined' && module.exports) {
