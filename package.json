@@ -1,6 +1,6 @@
 {
   "name": "jm-sdk-core",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "sdk core lib is using to create sdk more easy",
   "main": "./lib/index",
   "scripts": {
@@ -23,8 +23,7 @@
   },
   "homepage": "https://github.com/jm-root/jm-sdk-core",
   "dependencies": {
-    "jm-core": "*",
-    "jm-ajax":"*"
+    "jm-ajax":"^0.0.11"
   },
   "devDependencies": {
       "bluebird": "*",
